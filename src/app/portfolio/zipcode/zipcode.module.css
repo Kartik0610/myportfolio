@@ -1,0 +1,111 @@
+/* project2.css */
+
+/* Container with background image and overlay */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/back.jpg'); /* Replace with your background image path */
+  background-size: cover; /* Ensure the background image covers the full container */
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background overlay */
+}
+
+/* Content box with light transparent background */
+.content {
+  background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Title styling */
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Input styling for ZIP code lookup */
+.zipInputs input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Button to trigger ZIP code lookup */
+.zipButton {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.zipButton:hover {
+  background-color: #005bb5;
+}
+
+/* Loading text */
+.loading {
+  color: #0070f3;
+}
+
+/* No result found message */
+.noZipResult {
+  color: red;
+  font-size: 1.2rem;
+}
+
+/* ZIP code result container styling */
+.zipResultContainer {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Individual ZIP code result item */
+.zipResultItem {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Result item paragraph styling */
+.zipResultItem p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Optional: Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .zipInputs input {
+    font-size: 1rem;
+  }
+
+  .zipButton {
+    padding: 8px 16px;
+  }
+
+  .zipResultItem p {
+    font-size: 1rem;
+  }
+}

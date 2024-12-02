@@ -1,0 +1,128 @@
+/* Overall Container */
+.contact-container {
+    position: relative;
+    width: 80%; /* Adjust container width */
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 50px auto; /* Center the container */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for the container */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Background Image */
+  .contact-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('/background2.jpg') no-repeat center center/cover;
+    z-index: -1;
+    filter: brightness(50%); /* Dim the background for better text visibility */
+  }
+  
+  /* Headings */
+  .contact-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .contact-content h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+  }
+  
+  /* Paragraphs and Lists */
+  .contact-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .contact-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .contact-content ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .contact-content a {
+    color: #00bfff;
+    text-decoration: none;
+  }
+  
+  .contact-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Profile Picture */
+  .contact-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-pic {
+    border-radius: 50%; /* Circular profile picture */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+  }
+  
+  /* Social Media Logos */
+  .social-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .social-logo {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .social-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  
+  .social-logo:active {
+    transform: scale(0.98);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      padding: 20px;
+      width: 90%; /* Adjust for smaller screens */
+    }
+  
+    .contact-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .contact-content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .social-logo {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  

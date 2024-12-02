@@ -1,0 +1,100 @@
+/* Overall Header Style */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: #6a4e23; /* Warm brown background */
+  color: white;
+  position: fixed;
+  width: 97%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: all 0.3s ease;
+  height: 30px; /* Compact height for navigation */
+}
+
+/* Sticky effect for header when scrolled */
+.header.sticky {
+  background: #8b5e3c; /* Darker brown when sticky */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Deeper shadow when sticky */
+}
+
+/* Logo Style */
+.logo img {
+  max-width: 120px; /* Smaller logo size for more compact layout */
+  transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Enlarge the logo slightly on hover */
+}
+
+/* Navigation Links */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Adjust gap for a more compact look */
+  margin: 0;
+}
+
+.navLinks li {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navLinks a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover background */
+  color: #d9a97f; /* Warm goldish text color on hover */
+  box-shadow: 0 0 10px rgba(217, 169, 127, 0.5); /* Glowing effect */
+}
+
+/* Underline Animation */
+.navLinks li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d9a97f; /* Highlight color for underline */
+  transition: width 0.3s ease;
+}
+
+.navLinks li:hover::after {
+  width: 100%; /* Expand underline on hover */
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+    height: 60px; /* Adjust height for mobile */
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navLinks li {
+    font-size: 16px;
+  }
+
+  .logo img {
+    max-width: 100px;
+  }
+}
